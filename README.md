@@ -4,7 +4,7 @@ An application for those that don't want to manually look up [pokerware](https:/
 
 # Usage
 ``` $ pokerware --help
-usage: pokerware [-h] [--formal] [--slang] [--custom CUSTOM_PATH]
+usage: pokerware [-h] [--formal | --slang | --custom CUSTOM_PATH]
                  code [code ...]
 
 Generate Pokerware password
@@ -17,7 +17,7 @@ optional arguments:
   --formal              Lookup words in the 'formal' wordlist
   --slang               Lookup words in the 'slang' wordlist
   --custom CUSTOM_PATH  Lookup words in a custom wordlist
-```
+ ```
 
 ## Examples
 ```
