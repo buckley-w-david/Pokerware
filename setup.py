@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
       name='pokerware',
-      version='0.1.1',
+      version='0.1.2',
       description="A small example package",
       long_description_content_type="text/markdown",
       long_description=long_description,
