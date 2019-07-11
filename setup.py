@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
       name='pokerware',
       version='0.1.2',
-      description="A small example package",
+      description="Generate passwords via playing cards",
       long_description_content_type="text/markdown",
       long_description=long_description,
       classifiers=[
