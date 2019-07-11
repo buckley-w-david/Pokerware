@@ -6,17 +6,17 @@ EXIT_FAILURE = 1
 
 def main():
     parser = argparse.ArgumentParser(description='Generate Pokerware password')
-    parser.add_argument('--formal', action='store_true', help="Lookup words in the 'formal' wordlist")
-    parser.add_argument('--slang', action='store_true', help="Lookup words in the 'slang' wordlist")
-    parser.add_argument('--custom', dest='custom_path', help="Lookup words in a custom wordlist")
+
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--formal', action='store_true', help="Lookup words in the 'formal' wordlist")
+    group.add_argument('--slang', action='store_true', help="Lookup words in the 'slang' wordlist")
+    group.add_argument('--custom', dest='custom_path', help="Lookup words in a custom wordlist")
+
     parser.add_argument('code', nargs='+',
                         help='A sequence of (Value, Suit, Value, Suit, Suit) entries')
 
     args = parser.parse_args()
     mode_sum = sum([args.formal, args.slang, args.custom_path is not None])
-    if mode_sum > 1:
-        print('Please only select one of --formal, --slang, or --custom not a combination of the three.')
-        exit(EXIT_FAILURE)
 
     try:
         if args.formal or mode_sum == 0:

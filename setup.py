@@ -7,6 +7,7 @@ setuptools.setup(
       name='pokerware',
       version='0.1.0',
       description="A small example package",
+      long_description_content_type="text/markdown",
       long_description=long_description,
       classifiers=[
         'Development Status :: 3 - Alpha',
